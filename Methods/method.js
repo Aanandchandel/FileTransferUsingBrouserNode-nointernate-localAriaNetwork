@@ -15,13 +15,21 @@ const getLocalIPAddress = () => {
     return localIPAddress;
   }; 
 
+  const  trimStringFromWord=(inputString, word,word2,word3)=> {
+    const index = inputString.indexOf(word)||inputString.indexOf(word2)||inputString.indexOf(word3);
+    if (index !== -1) {
+        return inputString.substring(0, index).trim()+word;
+    }
+    return inputString;
+}
+
 const login=(req, resp) => {
     resp.render("login");
   }
 
 const uploadpg=(req, res) => {
     console.log("done")
-    res.send(`done`);
+    res.render("start",{folderName:"done"})
   }
 
   const selectFile=(req, res) => {
@@ -32,4 +40,4 @@ const uploadpg=(req, res) => {
       res.send("Password not valid");
     }
   }
-  module.exports={ selectFile,login,uploadpg ,getLocalIPAddress}
+  module.exports={ selectFile,login,uploadpg ,getLocalIPAddress ,trimStringFromWord}

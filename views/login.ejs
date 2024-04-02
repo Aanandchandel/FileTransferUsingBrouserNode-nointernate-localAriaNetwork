@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+    .form{
+        height: 90vh;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
+    }
+    .form>input{
+        width: 30vw;
+
+        padding: 5px;
+
+    }
+</style>
 </head>
-<body>
-    <form action="/File" method="post" id="form" >
+<body >
+    <form   action="/File" method="post" class="form" id="form" >
+        <h1> Hyfi Receiver</h1>
 
-<input type="text" name="name" placeholder="Name">
+<input type="text" name="name" placeholder="Folder Name">
 <input  type="password" name="password" placeholder="password" >
 <input type="submit">
 
